@@ -1,0 +1,157 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #f9f9f9;
+  background-image: url(bg.png);
+  /* background-image: url(https://support.content.office.net/en-us/media/4ee76be2-dfde-4b30-9fd9-94e8aeb0cbf2.jpg); */
+  /* background-image: linear-gradient(315deg, #f9f9f9 0%, #0270a3 74%); */
+}
+.banner-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* This ensures the image covers the entire area */
+}
+
+/* Crop the banner image on mobile devices */
+@media (max-width: 768px) {
+  .banner-image {
+    object-position: center; /* Center the image */
+    height: 295px; /* Adjust height to crop the image */
+  }
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+p {
+  font-size: 16px;
+}
+h1 {
+  font-size: 3rem;
+}
+.btn-a {
+  font-size: 26px;
+  padding: 0.6rem 1.2rem;
+  background-color: #11a539;
+  color: black;
+  border-radius: 20px;
+}
+.btn-a:hover {
+  background-color: #0072d6;
+  color: black;
+}
+
+#navbar {
+  width: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0%;
+  align-items: center;
+  /* border-bottom: 2px solid black; */
+}
+.navbar-left {
+  color: white;
+  gap: 1rem;
+}
+/* .navbar-left img{
+    filter: invert(100%);
+} */
+#navbar img {
+  width: 150px;
+}
+.landing-section {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  /* background-color: #f9f9f9;*/
+  /* background-image: url(https://support.content.office.net/en-us/media/4ee76be2-dfde-4b30-9fd9-94e8aeb0cbf2.jpg); */
+  min-height: 50vh;
+  padding-top: 1rem;
+}
+.landing-section-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  color: black;
+}
+.blue-two{
+  color: #0072d6;
+}
+.landing-section-left img {
+  width: 100px;
+}
+.landing-section-left h1 span {
+  color: black;
+}
+.landing-section-left .btn-a {
+  text-align: center;
+}
+.landing-section-right img {
+  width: 400px;
+  border-radius: 12px;
+}
+
+.service-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 1.5rem; */
+  flex-wrap: wrap;
+  padding: 2rem 4rem;
+}
+.service-card {
+  width: 300px;
+  height: 270px;
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 2rem;
+  transition: 0.6s;
+}
+.service-card:hover {
+  background-color: black;
+  color: white;
+}
+.service-card h3 {
+  color: #004ed6;
+}
+
+.footer {
+  background-color: black;
+  text-align: center;
+  color: #004ed6;
+  padding: 1rem 1rem;
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .landing-section-left {
+    align-items: center;
+    text-align: center;
+  }
+  .landing-section-right img {
+    width: 300px;
+  }
+}
